@@ -13,5 +13,21 @@
   transform: translate(-50%, -50%);
   height: 100%;
   z-index: -1;
-  @apply bg-gray-900;
+  @apply bg-gray-900  border-y-2 border-y-cyan-400;
+}
+.layout {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,6 +1,8 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React, { useState, FormEvent } from "react";
+import Image from "next/image";
+import logo from "../assets/logo_2.png";
 function NavBar() {
   const [search, setSearch] = useState("");
   const route = useRouter();
@@ -12,23 +14,27 @@ function NavBar() {
   };
 
   return (
-    <div className="bg-blue-800 ">
+    <div className="bg-blue-800 text-gray-900 ">
       <div className="container mx-auto flex justify-between items-center p-2">
-        <a href="/">
-          <h1 className="text-2xl md:text-4xl font-bold italic">LookUp!</h1>
-        </a>
-        <form onSubmit={handleSubmit} className="flex gap-3">
-          <input
-            id="mainSearch"
-            className=" block  flex-1 px-2 focus:bg-red-500"
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
+        <a className="inline-flex  items-center self-stretch gap-1 " href="/">
+          <Image
+            className="block filter"
+            width={50}
+            height={50}
+            src={logo}
+            alt="logo"
           />
-          <button className="bg-red-500 py-1 p-3 font-medium hover:scale-90">
-            GO
-          </button>
-        </form>
+
+          <h1 className="text-2xl   md:text-3xl font-bold ">LookUp!</h1>
+        </a>
+        <div>
+          <a
+            href="javascript:void(0)"
+            className=" p-2 py-1 border-2 border-gray-900 rounded-full"
+          >
+            Sign In{" "}
+          </a>
+        </div>
       </div>
     </div>
     /*     https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=apple */

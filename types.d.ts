@@ -98,6 +98,12 @@ type User ={
 }
 type Users={
     results:User[]
+    info: {
+        "seed": string,
+        "results": number,
+        "page": number,
+        "version": string , //"1.4"
+    }
 }
 
 type userPost ={

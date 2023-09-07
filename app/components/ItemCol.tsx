@@ -6,7 +6,7 @@ type Props = {
 
 export default function ItemCol({ result }: Props) {
   return (
-    <ul defaultValue={1}>
+    <ul key={result.pageid}>
       {result.thumbnail?.source ? (
         <li>
           <div

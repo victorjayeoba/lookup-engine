@@ -1,4 +1,4 @@
-export default async function getWikiResults(): Promise<Users>  {
+export default async function getAllUsers(): Promise<Users>{
 
     const response = await fetch ("https://randomuser.me/api/?results=10")
     
@@ -7,5 +7,6 @@ export default async function getWikiResults(): Promise<Users>  {
 https://jsonplaceholder.typicode.com/users/
 */
   const data = response.json()
+  
    return data
 }
