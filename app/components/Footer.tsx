@@ -8,7 +8,7 @@ export default function Footer() {
         <span>This website was designed and developed by </span>
         <Link
           className="inline-block text-xl"
-          href={"https://jsonplaceholder.typicode.com/posts?userId=100"}
+          href={"https://twitter.com/VickyJay_media"}
         >
           Victor Jayeoba
         </Link>
